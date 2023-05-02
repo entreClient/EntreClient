@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 //
 import { RegistroComponent } from './components/registro/registro.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 
 const routes: Routes = [
-    {path:'', redirectTo: 'registro', pathMatch: 'full'},
+   
   { path: 'registro', component: RegistroComponent },
+ { path: 'iniciar_Sesion', component: IniciarSesionComponent },
  
-  { path: '**', redirectTo:'registro'  }
+  
 ];
 
 @NgModule({

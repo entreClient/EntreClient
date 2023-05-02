@@ -1,0 +1,109 @@
+.container {
+  width: 40rem; 
+  height: 40rem; 
+  position: relative;
+}
+
+.container img {
+  width: 100%; 
+  height: 100%; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 2s ease-in-out infinite;
+  
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+
+
+
+body{
+background-color: #edf4fe;
+
+}
+main {
+  
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.form{ 
+    flex-direction: column;
+}
+
+.datEmpresa{
+    display: flex;
+    flex-direction: column;
+}
+
+.iniciarSesion{
+    display: flex;
+    justify-content: center;
+}
+
+
+.box_registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+  width: 25rem;
+  height: 35rem;
+  background-color: #ffffff;
+  filter: drop-shadow(47.1084px 88.2088px 80px rgba(21, 63, 101, 0.07))
+    drop-shadow(30.5332px 57.1724px 46.8519px rgba(21, 63, 101, 0.0531481))
+    drop-shadow(18.1455px 33.9767px 25.4815px rgba(21, 63, 101, 0.0425185))
+    drop-shadow(9.42169px 17.6418px 13px rgba(21, 63, 101, 0.035))
+    drop-shadow(3.83846px 7.18739px 6.51852px rgba(21, 63, 101, 0.0274815))
+    drop-shadow(0.872378px 1.6335px 3.14815px rgba(21, 63, 101, 0.0168519));
+  border-radius: 3rem;
+  padding: 3rem 3rem;
+}
+.registrar{
+    display: flex;
+    flex-direction: column;
+}
+.registrar p{
+font-weight: 400;
+line-height: 22px;
+
+align-items: flex-end;
+text-align: center;
+text-decoration-line: underline;
+
+color: #000000;
+}
+.titulo{
+    margin-bottom:1rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo img{
+width: 5rem;
+}
+.titulo label{
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    color: #153F65;
+
+}
