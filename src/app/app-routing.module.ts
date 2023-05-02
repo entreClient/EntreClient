@@ -6,11 +6,11 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 
 const routes: Routes = [
-   
+    {path:'', redirectTo: 'iniciar_Sesion', pathMatch: 'full'},
   { path: 'registro', component: RegistroComponent },
  { path: 'iniciar_Sesion', component: IniciarSesionComponent },
  
-  
+
 ];
 
 @NgModule({
