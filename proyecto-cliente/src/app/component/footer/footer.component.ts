@@ -22,7 +22,15 @@ export class FooterComponent {
     {
       name: 'Producto 3',
       description: 'Descripción del producto 3',
-      image: '/assets/imagnes/zapatilla.jpg'
+      image: '/assets/imagnes/zapatilla.jpg',
+      price: 20.00
+    },
+    {
+      id: 4,
+      name: 'Producto 4',
+      description: 'Descripción del producto 4',
+      image: 'https://www.estilos.com.pe/57877-large_default/mechanic-chompa-hombre-pp-drips.jpg',
+      price: 20.00
     }
   ]
 }

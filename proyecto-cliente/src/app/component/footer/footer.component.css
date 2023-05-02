@@ -2,13 +2,19 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+
   .card-img-top {
     height: 200px;
     object-fit: cover;
   }
-  
+
   .card-body {
     padding: 10px;
   }
-  
+
+  .banner {
+    background-image: url('../../../assets/BanEmpre.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }

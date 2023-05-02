@@ -21,13 +21,15 @@ import { MatSortModule } from '@angular/material/sort';
 import { RouterModule } from '@angular/router';
 import {MatRadioModule} from '@angular/material/radio';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { PagoComponent } from './component/pago/pago.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<div class="container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Detalles del producto</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="product-info">
+          <img src="https://home.ripley.com.pe/Attachment/WOP_5/2005302760186/2005302760186_2.jpg" alt="Product image">
+          <div class="details">
+            <p class="name">Nombre del producto</p>
+            <p class="price">$99.99</p>
+            <p class="description">Descripción del producto.</p>
+            <mat-form-field appearance="outline" class="quantity">
+              <mat-label>Cantidad</mat-label>
+              <input matInput type="number" min="1" max="10" value="1">
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  <div class="checkout">
+    <div class="form-container">
+      <form class="form">
+        <h3 class="subtitle">Método de envío</h3>
+        <mat-radio-group>
+          <mat-radio-button value="recojo" (click)="abrirDialogoRecojoTienda()">Recojo en tienda</mat-radio-button>
+
+          <mat-radio-button value="delivery" (click)="abrirDialogoDelivery()">Delivery</mat-radio-button>
+
+        </mat-radio-group>
+        <div class="divider"></div>
+        <h3 class="subtitle">Método de pago</h3>
+        <mat-radio-group>
+          <mat-radio-button value="credito" (click)="abrirDialogoCredito()">Crédito</mat-radio-button>
+
+          <mat-radio-button value="debito" (click)="abrirDialogoDebito()">Débito</mat-radio-button>
+        </mat-radio-group>
+
+        <div class="button-container">
+          <button mat-raised-button color="primary" (click)="openSnackBar()">Realizar pago</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

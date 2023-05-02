@@ -1,0 +1,78 @@
+<div class="credito-container" *ngIf="data.tipoPago === 'credito'">
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>Número de tarjeta de crédito</mat-label>
+    <input matInput type="text" placeholder="Ingrese el número de su tarjeta">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>Fecha de expiración</mat-label>
+    <input matInput type="text" placeholder="MM/AA">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>Código de seguridad</mat-label>
+    <input matInput type="text" placeholder="Ingrese el código de seguridad">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<div class="debito-container" *ngIf="data.tipoPago === 'debito'">
+  <mat-form-field appearance="outline" class="debito-form-field">
+    <mat-label>Número de tarjeta de débito</mat-label>
+    <input matInput type="text" placeholder="Ingrese el número de su tarjeta">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="debito-form-field">
+    <mat-label>Fecha de expiración</mat-label>
+    <input matInput type="text" placeholder="MM/AA">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="debito-form-field">
+    <mat-label>Código de seguridad</mat-label>
+    <input matInput type="text" placeholder="Ingrese el código de seguridad">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<div class="ubicacion-container" *ngIf="data.metodoEnvio === 'recojoTienda'">
+  <mat-form-field appearance="outline" class="ubicacion-form-field">
+    <p>Ubicación</p>
+    <hr>
+    <p>The ubication of the store is u</p>
+  </mat-form-field>
+</div>
+
+<div class="delivery-container" *ngIf="data.metodoEnvio === 'delivery'">
+  <mat-form-field appearance="outline" class="delivery-form-field">
+    <mat-label>Ingrese su dirección</mat-label>
+    <input matInput type="text" placeholder="Ingrese su dirección">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="delivery-form-field">
+    <mat-label>Ingrese su teléfono</mat-label>
+    <input matInput type="tel" placeholder="Ingrese su teléfono">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="card-container">
+
+  <div class="lista-page">
+    <div class="lista-container">
+      <h2>Lista de compras</h2>
+      <div class="card-container">
+        <mat-card class="card" *ngFor="let item of lista; let i =index" >
+          <img mat-card-image [src]="item.imageUrl" alt="Imagen de {{ item.title }}">
+          <mat-card-content>
+            <h3 mat-card-title>{{ item.title }}</h3>
+            <p mat-card-subtitle>{{ item.description }}</p>
+
+            <div class="button-group">
+              <button mat-icon-button (click)="decreaseQuantity(i)" [disabled]="item.quantity === 0">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <span class="quantity">{{ item.quantity }}</span>
+              <button mat-icon-button (click)="increaseQuantity(i)">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+
+            <div class="button-container">
+              <button mat-raised-button color="primary" (click)="pagos()">
+                <mat-icon>add_shopping_cart</mat-icon>
+              </button>
+              <button mat-raised-button color="warn" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

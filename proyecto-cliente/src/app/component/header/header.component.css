@@ -1,25 +1,17 @@
 .fill-space {
     flex: 1 1 auto;
   }
-  
+
   mat-form-field {
     margin: 0 16px;
     max-width: 600px;
     width: 100%;
   }
-  
+
   mat-icon-button {
     margin-left: 7px;
   }
-  
+
 .search-box .mat-form-field-outline {
     box-shadow: 0 0 0 2px #ADD8E6;
 }
-
-.banner {
-    background-image: url('/assets/imagnes/BanEmpre.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-  }
-  

@@ -1,0 +1,19 @@
+<div class="dsc-carousel">
+  <div class="dsc-carousel_btns">
+    <mat-icon (click)="setBack()">keyboard_arrow_left</mat-icon>
+    <mat-icon (click)="setNext()">keyboard_arrow_right</mat-icon>
+  </div>
+  <div class="card-container">
+    <mat-card class="card" *ngFor="let item of items; let i =index" >
+      <img mat-card-image [src]="item.image" alt="Imagen de {{ item.name }}">
+      <mat-card-content>
+        <h3 mat-card-title>{{ item.description }}</h3>
+        <p mat-card-subtitle>{{ item.price }}</p>
+        <div class="button-group">
+          <button mat-raised-button color="primary" (click)="compras()">Agregar al carrito</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
