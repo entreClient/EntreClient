@@ -1,0 +1,83 @@
+<div class="tarjeta-container" *ngIf="data.tipoPago === 'tarjeta'">
+  <mat-form-field appearance="outline" class="credito-form-field" >
+    <mat-label>Número de la tarjeta</mat-label>
+    <input [formControl]="numeroTarjeta" [required]="data.tipoPago === 'tarjeta'" matInput type="text" placeholder="Ingrese el número de su tarjeta">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field" >
+    <mat-label>Titular de la tarjeta</mat-label>
+    <input [formControl]="nombreTarjeta" [required]="data.tipoPago === 'tarjeta'" matInput type="text" placeholder="Ingrese el titular de su tarjeta">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>Fecha de expiración</mat-label>
+    <input [formControl]="fechaExpiracion" [required]="data.tipoPago === 'tarjeta'" matInput type="text" placeholder="MM/AA">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>CVV</mat-label>
+    <input [formControl]="cvv" [required]="data.tipoPago === 'tarjeta'" matInput type="text" placeholder="CVV">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary" [disabled]="!camposValidosTarjeta()" (click)="agregarPago()">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn" (click)="cerrarDialogo()">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<div class="yape-container" *ngIf="data.tipoPago === 'yape'">
+  <mat-form-field appearance="outline" class="debito-form-field" >
+    <mat-label>Número de celular</mat-label>
+    <input [formControl]="numeroCelular" [required]="data.tipoPago === 'yape'" matInput type="text" placeholder="Ingrese el número de su celular">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="credito-form-field">
+    <mat-label>Titular de la cuenta</mat-label>
+    <input [formControl]="nombreYape" [required]="data.tipoPago === 'yape'" matInput type="text" placeholder="Ingrese el titular de su cuenta">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="debito-form-field">
+    <mat-label>Número del documento de identidad</mat-label>
+    <input [formControl]="numeroDocumento" [required]="data.tipoPago === 'yape'" matInput type="text" placeholder="Ingrese su DNI,Pasaporte, etc.">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary" [disabled]="!camposValidosYape()" (click)="agregarPago()">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn" (click)="cerrarDialogo()">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<div class="delivery-container" *ngIf="data.metodoEnvio === 'delivery'">
+  <div class="direcciones-container">
+    <h3>Mis direcciones</h3>
+    <mat-radio-group [(ngModel)]="direccionSeleccionada">
+      <mat-radio-button *ngFor="let direccion of direcciones" [value]="direccion">{{ direccion.direccion }}</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <mat-form-field appearance="outline" class="delivery-form-field">
+    <mat-label>Ingrese su dirección</mat-label>
+    <input [formControl]="direccion" matInput type="text" placeholder="Ingrese su dirección">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="delivery-form-field">
+    <mat-label>Ingrese su número de celular</mat-label>
+    <input [formControl]="celular" matInput type="tel" placeholder="Ingrese su número de celular">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-button color="primary" [disabled]="!camposValidosDelivery()" (click)="agregarEnvio()">
+      <mat-icon>add_circle</mat-icon>
+      Agregar
+    </button>
+    <button mat-button color="warn" (click)="cerrarDialogo()">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+    <button mat-button color="primary" (click)="obtenerDireccionSeleccionada()">
+      Obtener Dirección Seleccionada
+    </button>
+  </div>
+</div>

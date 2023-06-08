@@ -1,0 +1,13 @@
+<h1>Mis compras</h1>
+<hr>
+<div class="card-grid">
+  <div class="card" *ngFor="let compra of compras">
+    <h2>{{ compra.id }}</h2>
+    <p>{{ compra.date }}</p>
+    <p>{{ compra.metodoEnvio.type }}</p>
+    <p>{{ compra.montototal }}</p>
+    <button (click)="verDetalle(compra.id)">Ver Detalle</button>
+  </div>
+  <button (click)="volverAlInicio()">Volver al Inicio</button>
+</div>
+

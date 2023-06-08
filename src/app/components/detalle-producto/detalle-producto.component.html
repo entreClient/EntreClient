@@ -1,0 +1,26 @@
+<app-toolbar />
+<div *ngIf="product">
+  <div class="container">
+    <h1>Emprendimiento: {{ getEmprendimientoName(product.emprendimientoId) }}</h1>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <div class="image-container">
+      <img [src]="product.image" alt="Imagen del producto">
+    </div>
+    <p>Precio: {{ product.price }}</p>
+    <!-- Agrega aquí el resto de la información del producto que deseas mostrar -->
+
+    <button (click)="agregarAlCarrito()">Agregar al carrito</button>
+
+    <hr>
+
+    <h3>Comentarios y valoración</h3>
+    <textarea [(ngModel)]="comentarios" rows="4" cols="50" placeholder="Escribe un comentario"></textarea>
+    <div>
+    <span *ngFor="let estrella of estrellas" (click)="seleccionarValoracion(estrella)">
+      <i class="fa" [class.fa-star]="estrella <= valoracion" [class.fa-star-o]="estrella > valoracion"></i>
+    </span>
+    </div>
+    <button (click)="enviarComentario()">Enviar comentario</button>
+  </div>
+</div>

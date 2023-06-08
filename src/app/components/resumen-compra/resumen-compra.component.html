@@ -1,0 +1,25 @@
+<app-toolbar />
+<div class="container" *ngIf="compra">
+  <h1>Compra realizada con exito</h1>
+  <h2>Metodo de envio: {{ compra.metodoEnvio.type }}</h2>
+  <div *ngIf="compra.metodoEnvio.type == 'delivery'">
+    <h2>Direccion de envio: {{compra.metodoEnvio.direccion}}</h2>
+    <h2>Celular registrado: {{compra.metodoEnvio.celular}}</h2>
+  </div>
+  <h2>Metodo de pago: {{ compra.metodoPago.type }}</h2>
+  <div *ngIf="compra.metodoPago.type == 'yape'">
+    <h2>Numero de celular: {{compra.metodoPago.numero_celular.substring(6,8)}}</h2>
+    <h2>Nombre del titular: {{compra.metodoPago.nombre_titular}}</h2>
+  </div>
+  <div *ngIf="compra.metodoPago.type == 'tarjeta'">
+    <h2>Numero de tarjeta: {{compra.metodoPago.number_card.substring(12,15)}}</h2>
+    <h2>Nombre del titular: {{compra.metodoPago.name_card}}</h2>
+  </div>
+
+  <p>Monto total: {{ compra.montototal }}</p>
+  <button (click)="volverAlInicio()">Volver al Inicio</button>
+  <button (click)="irAMisCompras()">Ir a mis compras</button>
+
+  <hr>
+</div>
+
