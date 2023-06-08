@@ -1,0 +1,54 @@
+<app-toolbar></app-toolbar>
+
+<div class="container">
+  <div class="sidebar" #sidebar>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Filtros</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="filter-group">
+          <mat-label>Género</mat-label>
+          <hr>
+          <mat-checkbox class="sidebar-checkbox" color="primary" [(ngModel)]="generoMasculino">Masculino</mat-checkbox>
+          <mat-checkbox class="sidebar-checkbox" color="primary" [(ngModel)]="generoFemenino">Femenino</mat-checkbox>
+        </div>
+        <div class="filter-group">
+          <mat-label>Recomendaciones</mat-label>
+          <hr>
+          <mat-checkbox [(ngModel)]="recomendacion" class="sidebar-checkbox" color="primary"><mat-icon class="amarillo">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon></mat-checkbox>
+          <mat-checkbox [(ngModel)]="recomendacion" class="sidebar-checkbox" color="primary"><mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon></mat-checkbox>
+          <mat-checkbox [(ngModel)]="recomendacion" class="sidebar-checkbox" color="primary"><mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="transparent">star</mat-icon> <mat-icon class="transparent">star</mat-icon></mat-checkbox>
+          <mat-checkbox [(ngModel)]="recomendacion" class="sidebar-checkbox" color="primary"><mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="transparent">star</mat-icon></mat-checkbox>
+          <mat-checkbox [(ngModel)]="recomendacion" class="sidebar-checkbox" color="primary"><mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon> <mat-icon class="amarillo">star</mat-icon></mat-checkbox>
+        </div>
+        <div class="filter-group">
+          <mat-label>Precio</mat-label>
+          <hr>
+          <mat-checkbox class="sidebar-checkbox" color="primary">Menor a s/50</mat-checkbox>
+          <mat-checkbox class="sidebar-checkbox" color="primary">s/50 - s/100</mat-checkbox>
+          <mat-checkbox class="sidebar-checkbox" color="primary">s/100 - s/150</mat-checkbox>
+          <mat-checkbox class="sidebar-checkbox" color="primary">s/150 a más</mat-checkbox>
+        </div>
+        <button mat-raised-button color="primary" (click)="applyFilters()">Aplicar filtros</button>
+        <button mat-raised-button color="warn" (click)="resetFilters()">Restablecer filtros</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="product-grid">
+    <mat-card class="card" *ngFor="let item of filteredProducts; let i =index" >
+      <img mat-card-image [src]="item.image" alt="Imagen de {{ item.name }}">
+      <mat-card-content>
+        <h3 mat-card-title>{{ item.name }}</h3>
+        <p mat-card-subtitle>{{ item.description }}</p>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="addToCart(item)">Add to Cart</button>
+          <button mat-raised-button color="accent" (click)="verDetalleProducto(item.id)"><mat-icon>remove_red_eye</mat-icon></button>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

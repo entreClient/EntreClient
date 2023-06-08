@@ -1,0 +1,102 @@
+.carousel-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+ngb-carousel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #010830;
+}
+
+.container {
+  background: #010830;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 2%;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-carousel mat-card {
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-carousel mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.16);
+}
+
+.custom-carousel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-carousel mat-card-content {
+  padding: 16px;
+}
+
+.custom-carousel h4.carousel-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.custom-carousel p.carousel-description {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.custom-carousel mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-carousel mat-card-actions button {
+  margin-left: 8px;
+}
+
+/* Estilos para hacer el carousel y el contenedor responsivos */
+
+@media (max-width: 767px) {
+  .container {
+    padding: 12% 7%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 10% 5%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    padding: 8% 3%;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field .mat-form-field-infix {
+  padding: 0;
+}
+
+.mat-form-field .mat-form-field-wrapper {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.mat-form-field .mat-form-field-wrapper:hover,
+.mat-form-field .mat-form-field-wrapper:focus-within {
+  border-color: #4a90e2;
+}
+
+.mat-form-field .mat-form-field-flex {
+  align-items: center;
+}
+
+.mat-form-field .mat-form-field-infix input[type="text"] {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+}
+
+.mat-form-field .mat-form-field-infix input[type="text"]:focus {
+  outline: none;
+}
+
+
+.yape-container,
+.delivery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 300px;
+}
+
+.tarjeta-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+}
+
+.ubicacion-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+}
+
+.credito-form-field {
+  width: calc(100% / 2);
+}
+
+
+.debito-form-field {
+  width: calc(100% / 2);
+}
