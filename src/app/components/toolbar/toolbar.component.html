@@ -1,0 +1,20 @@
+<mat-toolbar>
+  <button mat-button class="Home_class" aria-label="Icon to go /home" (click)="home()" onmouseover="" style="cursor: pointer;">
+    <img class="image-logo" src="../../../assets/logo.png" alt="Imagen del logo">
+  </button>
+  <span class="example-spacer"></span>
+<div class="example-search-container">
+  <input [formControl]="searchText" matInput placeholder="Search">
+  <button (click)="busqueda()" mat-button [disabled]="!isSearchValid()"><mat-icon>search</mat-icon></button>
+</div>
+<span class="example-spacer"></span>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with bell icon">
+  <mat-icon>notifications</mat-icon>
+</button>
+<button mat-icon-button class="example-icon" (click)="compras()" aria-label="Example icon-button with shopping cart icon">
+  <mat-icon>shopping_cart</mat-icon>
+</button>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with user circle icon">
+  <mat-icon>account_circle</mat-icon>
+</button>
+</mat-toolbar>
