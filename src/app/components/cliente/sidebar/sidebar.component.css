@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+   position: fixed;
+}
+
+.menu-button {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.mat-list-item {
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.mat-list-item:hover {
+  text-decoration: underline;
+}
+.menu-button {
+  padding: 16px;
+  margin-bottom: 16px;
+  font-weight: bold; /* Hace que el título sea audaz */
+  font-size: 20px; /* Tamaño de fuente más grande */
+}
+
+.mat-list-item {
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold; /* Hace que los elementos de la lista sean audaces */
+  font-size: 18px; /* Tamaño de fuente más grande */
+}
+  .sidebar {
+  background-color: #edf4fe; /* Cambia el color de fondo del menú lateral */
+}
+.content{
+  margin-top: 42px;
+}

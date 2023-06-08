@@ -1,0 +1,42 @@
+<div class="cont">
+  <div class="card-container">
+    <div class="card" *ngFor="let product of products">
+      <img [src]="product.image" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price }}</p>
+      <button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+      </button>
+    </div>
+
+  </div>
+  
+  <div class="rectangle">
+    <h2>Descripcion del emprendimiento</h2>
+    <div class="text-section">
+      <p>Agregar texto</p>
+      <p>Agregar imagen</p>
+    </div>
+    
+    <button class="add-button1">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+    </button>
+    <button class="add-button2">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+      </button>
+  </div>
+  
+  <div class="image-rectangle">
+    <h2>Generar anuncio</h2>
+    <div class="image-container">
+      <img src="/assets/imagnes/publicida1.jpeg" alt="Imagen 1">
+      <img src="/assets/imagnes/publicidad2.jpeg" alt="Imagen 2">
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  

@@ -1,0 +1,57 @@
+.contenedor{
+  padding-right: 5vw;
+}
+.navbar-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+ 
+  margin: 0 auto;
+
+  background-color: white;
+}
+
+.logo-image {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.fill-space {
+  flex: 1;
+}
+
+.search-box {
+  margin-right: 10px;
+}
+
+.nav-icons {
+  display: flex;
+}
+
+button.mat-icon-button {
+  margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    padding: 0 10px;
+  }
+  
+  .logo-image {
+    height: 30px;
+  }
+  
+  .search-box {
+    display: none;
+  }
+  
+  .nav-icons {
+    margin-left: auto;
+  }
+}
+
+
+
+
+  

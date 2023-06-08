@@ -1,0 +1,17 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="sidebar">
+    <h1 class="menu-button" [routerLink]="'/homecliente'">Menu</h1>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/pedidos">Pedidos</a>
+      <a mat-list-item routerLink="/productos-entregados">Productos Entregados</a>
+      <a mat-list-item routerLink="/metodo-pago">Asociar método de pago</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Contenido principal de la página -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
