@@ -117,6 +117,10 @@ constructor(
         console.log('Se agregó cliente');
       }
     });
+
+
+      this.form_registro.reset();
+
   }
 }
 
