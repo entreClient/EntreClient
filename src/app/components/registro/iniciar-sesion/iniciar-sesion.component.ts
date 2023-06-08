@@ -20,5 +20,27 @@ export class IniciarSesionComponent {
     
     });
   }
-    verificarLogin() { }
+  verificarLogin() { 
+    const username = this.loginForm.value.username;
+    const password = this.loginForm.value.i_password;
+    
+    if (this.loginForm.valid) {
+      this.servicio.getGestor(username, password).subscribe(
+        rol => {
+          if (rol === 'Emprendedor') {
+            this.router.navigate(['pag-emprendedor']);
+          } else if (rol === 'Cliente') {
+            this.router.navigate(['pag-cliente']);
+          } else {
+            console.log('Rol no especificado');
+          }
+        },
+        error => {
+          console.log('Credenciales inválidas');
+        }
+      );
+    } else {
+      console.log('El formulario no es válido');
+    }
+  }
 }

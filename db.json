@@ -1,11 +1,26 @@
 {
-  "cliente": [],
+  "cliente": [
+    {
+      "nombre": "Marcos",
+      "apellido": "Mendoza",
+      "celular": "098987676",
+      "email": "marxcos@gmail.com",
+      "id_gestor": 8,
+      "id": 1
+    }
+  ],
   "gestor": [
     {
       "username": "Xiomara12343",
       "password": "12345",
       "rol": "Emprendedor",
       "id": 7
+    },
+    {
+      "username": "marcos1234",
+      "password": "1234",
+      "rol": "Cliente",
+      "id": 8
     }
   ],
   "emprendedor": [
