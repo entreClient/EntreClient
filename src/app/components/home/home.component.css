@@ -1,0 +1,38 @@
+.banner {
+  background-image: url('../../../assets/BanEmpre.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner {
+    height: 150px;
+  }
+}
+
+.container-fluid {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
