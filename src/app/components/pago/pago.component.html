@@ -1,0 +1,52 @@
+<app-toolbar></app-toolbar>
+
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Detalles del producto</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="product-info">
+          <mat-card class="card" *ngFor="let pago of pagos">
+            <mat-card-content>
+              <h3 mat-card-title>{{ pago.name }}</h3>
+              <p mat-card-subtitle>{{ pago.description }}</p>
+              <p mat-card-subtitle>{{ pago.price }}</p>
+              <p mat-card-subtitle>{{ pago.quantity }}</p>
+              <img src="{{pago.image}}" alt="Imagen del producto">
+            </mat-card-content>
+          </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="checkout">
+    <div class="form-container">
+      <form class="form">
+        <h3 class="subtitle">Método de envío</h3>
+        <mat-radio-group [(ngModel)]="metodoEnvio">
+          <mat-radio-button value="delivery" (click)="abrirDialogoDelivery()">MethodEnvio</mat-radio-button>
+
+        </mat-radio-group>
+        <div class="divider"></div>
+        <h3 class="subtitle">Método de pago</h3>
+        <mat-radio-group [(ngModel)]="metodoPago">
+          <mat-radio-button value="tarjeta" (click)="abrirDialogoTarjeta()">Tarjeta</mat-radio-button>
+
+          <mat-radio-button value="yape" (click)="abrirDialogoYape()">Yape</mat-radio-button>
+        </mat-radio-group>
+
+        <div class="montoTotal">
+          <h3 class="subtitle">Monto total</h3>
+          <p class="monto">{{ montoTotal }}</p>
+        </div>
+
+        <div class="button-container">
+          <button mat-raised-button color="primary" [disabled]="pagos.length == 0 || direccionSeleccionada == null  || metodoPagoSeleccionado == null" (click)="openSnackBar()">Realizar pago</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
