@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "entreclient": {
+    "webapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/entreclient",
+            "outputPath": "dist/webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,7 +26,8 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -61,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "entreclient:build:production"
+              "browserTarget": "webapp:build:production"
             },
             "development": {
-              "browserTarget": "entreclient:build:development"
+              "browserTarget": "webapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "entreclient:build"
+            "browserTarget": "webapp:build"
           }
         },
         "test": {
@@ -98,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "6224efb3-03fc-40ca-8cc6-f72ce20495bc"
+    "analytics": "5a4f1abb-f1c1-4c8c-aa10-dadc1f752c68"
   }
 }

@@ -1,0 +1,253 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Producto 1",
+      "description": "Descrição do produto 1",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/2579041-1500-1500/image-05b3f224bae64c4fad283ea053a07267.jpg?v=637493941239400000",
+      "price": 10,
+      "quantity": 0,
+      "emprendimientoId": 1,
+      "recomendation": 5
+    },
+    {
+      "id": 2,
+      "name": "Producto 2",
+      "description": "Descrição do produto 2",
+      "image": "https://www.pielesvelasquez.com/wp-content/uploads/2018/06/cartera-de-dama-en-cuero.jpg",
+      "price": 20,
+      "quantity": 0,
+      "emprendimientoId": 2,
+      "recomendation": 4
+    },
+    {
+      "id": 3,
+      "name": "Producto 3",
+      "description": "Descrição do produto 3",
+      "image": "https://hushpuppiespe.vtexassets.com/arquivos/ids/243050-800-auto?v=637993049739770000&width=800&height=auto&aspect=true",
+      "price": 30,
+      "quantity": 0,
+      "emprendimientoId": 1,
+      "recomendation": 3
+    },
+    {
+      "id": 4,
+      "name": "Producto 4",
+      "description": "Descrição do produto 4",
+      "image": "https://home.ripley.com.pe/Attachment/WOP_5/2016923080003/2016923080003-2.jpg",
+      "price": 40,
+      "quantity": 0,
+      "emprendimientoId": 2,
+      "recomendation": 2
+    },
+    {
+      "id": 5,
+      "name": "Producto 5",
+      "description": "Descrição do produto 5",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/12373630-1000-1000/imageUrl_1.jpg?v=638037285175700000",
+      "price": 50,
+      "quantity": 0,
+      "emprendimientoId": 2,
+      "recomendation": 1
+    },
+    {
+      "id": 6,
+      "name": "Producto 6",
+      "description": "Descrição do produto 6",
+      "image": "https://home.ripley.com.pe/Attachment/WOP_5/2020254375547/2020254375547_2.jpg",
+      "price": 60,
+      "quantity": 0,
+      "emprendimientoId": 1,
+      "recomendation": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Joao da Silva",
+      "email": "joao@exampel.com"
+    },
+    {
+      "id": 2,
+      "name": "Maria da Silva",
+      "email": "maria@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Jose da Silva",
+      "email": "jose@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Joana da Silva",
+      "email": "joana@example.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": 5,
+      "name": "Producto 5",
+      "description": "Descrição do produto 5",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/12373630-1000-1000/imageUrl_1.jpg?v=638037285175700000",
+      "price": 50,
+      "quantity": 5,
+      "emprendimientoId": 2
+    },
+    {
+      "id": 1,
+      "name": "Producto 1",
+      "description": "Descrição do produto 1",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/2579041-1500-1500/image-05b3f224bae64c4fad283ea053a07267.jpg?v=637493941239400000",
+      "price": 10,
+      "quantity": 4,
+      "emprendimientoId": 1
+    },
+    {
+      "id": 3,
+      "name": "Producto 3",
+      "description": "Descrição do produto 3",
+      "image": "https://hushpuppiespe.vtexassets.com/arquivos/ids/243050-800-auto?v=637993049739770000&width=800&height=auto&aspect=true",
+      "price": 30,
+      "quantity": 1,
+      "emprendimientoId": 1
+    }
+  ],
+  "emprendimientos": [
+    {
+      "id": 1,
+      "name": "Emprendimiento 1",
+      "description": "Descrição do emprendimiento 1",
+      "category": "Categoria 1",
+      "image": "https://oechsle.vteximg.com.br/arquivos/logo-oechsle.jpg?v=637455646169130000",
+      "location": "Av. Arequipa 123"
+    },
+    {
+      "id": 2,
+      "name": "Emprendimiento 2",
+      "description": "Descrição do emprendimiento 2",
+      "category": "Categoria 2",
+      "image": "https://img.freepik.com/vector-gratis/logotipo-tienda-bolsos-diseno-plantillas-marca-negocios-moda-vector-blanco-negro_53876-156443.jpg",
+      "location": "Av. Paseo de la República 425"
+    }
+  ],
+  "pagos": [
+    {
+      "id": 5,
+      "name": "Producto 5",
+      "description": "Descrição do produto 5",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/12373630-1000-1000/imageUrl_1.jpg?v=638037285175700000",
+      "price": 50,
+      "quantity": 1,
+      "emprendimientoId": 2
+    },
+    {
+      "id": 1,
+      "name": "Producto 1",
+      "description": "Descrição do produto 1",
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/2579041-1500-1500/image-05b3f224bae64c4fad283ea053a07267.jpg?v=637493941239400000",
+      "price": 10,
+      "quantity": 4,
+      "emprendimientoId": 1
+    }
+  ],
+  "methodPayment": [
+    {
+      "numero_celular": "123465789",
+      "nombre_titular": "Mario",
+      "numero_documento": "15968732",
+      "type": "yape",
+      "id": 1
+    },
+    {
+      "number_card": "1245783691597864",
+      "name_card": "Paolo",
+      "expiration_date_card": "08/26",
+      "cvv_card": "154",
+      "type": "tarjeta",
+      "id": 2
+    },
+    {
+      "numero_celular": "123456789",
+      "nombre_titular": "Casddsa",
+      "numero_documento": "14523678",
+      "type": "yape",
+      "id": 3
+    }
+  ],
+  "delivery": [
+    {
+      "direccion": "saxsaxas",
+      "celular": "123456789",
+      "type": "delivery",
+      "id": 1
+    }
+  ],
+  "compras": [
+    {
+      "id": "89a01e7c-0da8-4653-80d8-5f639f40e59e",
+      "date": "08/06/2023",
+      "montototal": 50,
+      "metodoEnvio": {
+        "direccion": "saxsaxas",
+        "celular": "123456789",
+        "type": "delivery",
+        "id": 1
+      },
+      "metodoPago": {
+        "number_card": "1245783691597864",
+        "name_card": "Paolo",
+        "expiration_date_card": "08/26",
+        "cvv_card": "154",
+        "type": "tarjeta"
+      },
+      "productos": [
+        {
+          "id": 5,
+          "name": "Producto 5",
+          "description": "Descrição do produto 5",
+          "image": "https://oechsle.vteximg.com.br/arquivos/ids/12373630-1000-1000/imageUrl_1.jpg?v=638037285175700000",
+          "price": 50,
+          "quantity": 1,
+          "emprendimientoId": 2
+        }
+      ]
+    },
+    {
+      "id": "0e81404e-e0bc-4cc2-b362-b397abba44ea",
+      "date": "08/06/2023",
+      "montototal": 90,
+      "metodoEnvio": {
+        "direccion": "saxsaxas",
+        "celular": "123456789",
+        "type": "delivery",
+        "id": 1
+      },
+      "metodoPago": {
+        "numero_celular": "123456789",
+        "nombre_titular": "Casddsa",
+        "numero_documento": "14523678",
+        "type": "yape"
+      },
+      "productos": [
+        {
+          "id": 5,
+          "name": "Producto 5",
+          "description": "Descrição do produto 5",
+          "image": "https://oechsle.vteximg.com.br/arquivos/ids/12373630-1000-1000/imageUrl_1.jpg?v=638037285175700000",
+          "price": 50,
+          "quantity": 1,
+          "emprendimientoId": 2
+        },
+        {
+          "id": 1,
+          "name": "Producto 1",
+          "description": "Descrição do produto 1",
+          "image": "https://oechsle.vteximg.com.br/arquivos/ids/2579041-1500-1500/image-05b3f224bae64c4fad283ea053a07267.jpg?v=637493941239400000",
+          "price": 10,
+          "quantity": 4,
+          "emprendimientoId": 1
+        }
+      ]
+    }
+  ]
+}
