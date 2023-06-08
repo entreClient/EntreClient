@@ -1,15 +1,30 @@
 {
-   "cliente": [
-    
-  ],
+  "cliente": [],
   "gestor": [
-   
+    {
+      "username": "Xiomara12343",
+      "password": "12345",
+      "rol": "Emprendedor",
+      "id": 7
+    }
   ],
   "emprendedor": [
-    
+    {
+      "nombre": "Xiomara",
+      "apellido": "Cerna",
+      "celular": "990987876",
+      "email": "xiomar@gmail.com",
+      "id_gestor": 7,
+      "id": 2
+    }
   ],
   "emprendimiento": [
-    
+    {
+      "nombre_Empresa": "XIO",
+      "descripcion": "productos tejuidos a crochet",
+      "rubro": "Venta",
+      "id_emprendedor": 2,
+      "id": 1
+    }
   ]
-
 }
