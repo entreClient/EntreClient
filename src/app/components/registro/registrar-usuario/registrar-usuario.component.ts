@@ -38,6 +38,9 @@ constructor(
     username: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required),
 
+    nombre_Empresa: [''],
+    descripcion: [''],
+    rubro: [''],
     
   })
 }
@@ -57,6 +60,11 @@ constructor(
       this.emprendedor.id_gestor = this.gestor.id;
 
 
+      this.emprendimiento.nombre_Empresa = this.form_registro.value.nombre_Empresa;
+      this.emprendimiento.descripcion = this.form_registro.value.descripcion;
+      this.emprendimiento.rubro = this.form_registro.value.rubro;
+      this.emprendimiento.id_emprendedor = this.emprendedor.id;
+
     } else if (this.gestor.rol === "Cliente") {
       this.cliente.nombre = this.form_registro.value.nombre;
       this.cliente.apellido = this.form_registro.value.apellido;
@@ -69,9 +77,49 @@ constructor(
   }
 
   registrarUsuario() {
+  this.asignaciones();
 
-  
+  if (this.form_registro.valid) {
+    this.servicio.agregar_gestor(this.gestor).pipe(
+      switchMap(gestorAgregado => {
+        this.gestor.id = gestorAgregado.id; // Asignar la ID del gestor agregado
+        if (this.gestor.rol === 'Emprendedor') {
+          this.emprendedor.id_gestor = this.gestor.id; // Asignar la ID del gestor al emprendedor
+          return this.servicio.agregar_emprendedor(this.emprendedor); // Agregar emprendedor
+        } else {
+          return of(null);
+        }
+      }),
+      switchMap(emprendedorAgregado => {
+        if (emprendedorAgregado) {
+          this.emprendedor.id = emprendedorAgregado.id; // Asignar la ID del emprendedor agregado
+          this.emprendimiento.id_emprendedor = this.emprendedor.id; // Asignar la ID del emprendedor al emprendimiento
+          return this.servicio.agregar_emprendimiento(this.emprendimiento); // Agregar emprendimiento
+        } else {
+          return of(null);
+        }
+      }),
+      switchMap(() => {
+        if (this.gestor.rol === 'Cliente') {
+          this.cliente.id_gestor = this.gestor.id; // Asignar la ID del gestor al cliente
+          return this.servicio.agregar_cliente(this.cliente); // Agregar cliente
+        } else {
+          return of(null);
+        }
+      })
+    ).subscribe(result => {
+      console.log('Usuario registrado con éxito');
+      console.log('Agregado al gestor');
+      if (this.gestor.rol === 'Emprendedor') {
+        console.log('Se agregó emprendedor');
+        console.log('Se agregó emprendimiento');
+      } else if (this.gestor.rol === 'Cliente') {
+        console.log('Se agregó cliente');
+      }
+    });
+  }
 }
 
 }
+
 
