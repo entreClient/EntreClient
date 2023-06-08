@@ -1,0 +1,46 @@
+<main class="form-container complete-view-port flex">
+  <div class="container">
+    <img src="../../../../assets/img/Recurso 2.png" alt="figura" />
+  </div>
+
+  <mat-card class="form-card box_registro">
+    <div class="titulo">
+      <img src="../../../../assets/img/logo.png" alt="logo" />
+      <label for="">Bienvenido</label>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="verificarLogin()">
+      <div class="datEmpresa">
+        <mat-form-field class="example-full-width">
+          <mat-label>Usuario</mat-label>
+          <input type="email" matInput formControlName="username" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput formControlName="i_password" />
+        </mat-form-field>
+      </div>
+      <div class="iniciarSesion">
+        <button mat-flat-button color="primary">Iniciar sesión</button>
+      </div>
+    </form>
+
+    <mat-card-content>
+      <div class="message text-center">
+        <a routerLink="/registro" routerLinkActive="active" class="form-link"
+          >Registarme</a
+        >
+      </div>
+      <div class="message text-center">
+        Recuperar contraseña.<a
+          routerLink="/cambiar-contraseña"
+          routerLinkActive="active"
+          class="form-link"
+        >
+          Click aquí</a
+        >
+      </div>
+    </mat-card-content>
+  </mat-card>
+</main>

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistroComponent } from './components/registro/registro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -20,14 +19,17 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { RouterModule } from '@angular/router';
 import {MatRadioModule} from '@angular/material/radio';
-import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
-
+import { IniciarSesionComponent } from './components/registro/iniciar-sesion/iniciar-sesion.component';
+import {MatCardModule} from "@angular/material/card";
+import { RegistrarUsuarioComponent } from './components/registro/registrar-usuario/registrar-usuario.component';
+import { CambiarContraseniaComponent } from './components/registro/cambiar-contrasenia/cambiar-contrasenia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistroComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+    RegistrarUsuarioComponent,
+    CambiarContraseniaComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
     MatSortModule,
     RouterModule,
     MatRadioModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
