@@ -23,13 +23,15 @@ import { IniciarSesionComponent } from './components/registro/iniciar-sesion/ini
 import {MatCardModule} from "@angular/material/card";
 import { RegistrarUsuarioComponent } from './components/registro/registrar-usuario/registrar-usuario.component';
 import { CambiarContraseniaComponent } from './components/registro/cambiar-contrasenia/cambiar-contrasenia.component';
+import { DialogRegistroComponent } from './components/dialog-registro/dialog-registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IniciarSesionComponent,
     RegistrarUsuarioComponent,
-    CambiarContraseniaComponent
+    CambiarContraseniaComponent,
+    DialogRegistroComponent
   ],
   imports: [
     BrowserModule,

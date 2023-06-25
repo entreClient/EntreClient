@@ -25,7 +25,8 @@ export class RegistrarUsuarioComponent {
 
 constructor(
   private builder: FormBuilder,
-  private servicio: ServidorService
+  private servicio: ServidorService,
+  private router:Router
 ) { 
   this.form_registro = this.builder.group({
     nombre: this.builder.control('', Validators.required),
@@ -68,10 +69,80 @@ constructor(
 
   }
 
-  registrarUsuario() {
-
   
+  registrarUsuario() {
+    this.asignaciones();
+
+    if (this.form_registro.valid) {
+      this.servicio.agregar_gestor(this.gestor).pipe(
+        switchMap((gestorAgregado: Gestor) => {
+          this.gestor.id = gestorAgregado.id;
+          if (this.gestor.rol === 'Emprendedor') {
+            this.emprendedor.id_gestor = this.gestor.id;
+            return this.servicio.agregar_emprendedor(this.emprendedor);
+          } else {
+            return of(null);
+          }
+        }),
+        switchMap((emprendedorAgregado: Emprendedor) => {
+          if (emprendedorAgregado) {
+            this.emprendedor.id = emprendedorAgregado.id;
+            this.emprendimiento.id_emprendedor = this.emprendedor.id;
+            return this.servicio.agregar_emprendimiento(this.emprendimiento);
+          } else {
+            return of(null);
+          }
+        }),
+        switchMap(() => {
+          if (this.gestor.rol === 'Cliente') {
+            this.cliente.id_gestor = this.gestor.id;
+            return this.servicio.agregar_cliente(this.cliente);
+          } else {
+            return of(null);
+          }
+        })
+      ).subscribe(result => {
+        console.log('Usuario registrado con éxito');
+        console.log('Agregado al gestor');
+        if (this.gestor.rol === 'Emprendedor') {
+          console.log('Se agregó emprendedor');
+          console.log('Se agregó emprendimiento');
+        } else if (this.gestor.rol === 'Cliente') {
+          console.log('Se agregó cliente');
+        }
+
+        
+
+      }
+      
+      );
+      this.openDialog("Registro de usuario Exitoso")
+    
+    } else {
+      this.openDialog("Datos incompletos ")
+    }
+  }
+
+
+openDialog(message: string): void {
+  const dialogRef = this.dialog.open(DialogRegistroComponent, {
+    data: { message: message },
+  });
+
+    dialogRef.componentInstance.actualizarTrueFalse("Iniciar sesión", "Regresar"); 
+
+  dialogRef.afterClosed().subscribe(result => {
+    if (result === true) {
+      // Si el diálogo se cerró con [mat-dialog-close]="true"
+      console.log("Redireccionar al inicio de sesión");
+      this.router.navigate(['/iniciar_Sesion']);
+    } else {
+      // Si el diálogo se cerró con [mat-dialog-close]="false"
+      console.log("Cerrado sin redireccionar");
+    }
+  });
 }
+
 
 }
 
